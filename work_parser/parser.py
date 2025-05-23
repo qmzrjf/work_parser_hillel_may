@@ -3,7 +3,8 @@ from bs4 import BeautifulSoup, Tag
 
 class Parser:
 
-    def find_cards(self, page: BeautifulSoup) -> list:
+    @staticmethod
+    def find_cards(page: BeautifulSoup) -> list:
         class_ = "card card-hover card-visited wordwrap job-link js-job-link-blank js-hot-block"
         first_card = page.find_all(
             "div",
